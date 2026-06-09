@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      h2 {
+        color: green;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -19,7 +24,55 @@
       <a href="">link2</a>
       <a href="">link3</a> -->
     </header>
-    <h1>ABOUT</h1>
-    <a href="../index.html">GO TO HOME</a>
+    <p style="color: blue">Test</p>
+    <!-- <h1>ABOUT</h1>
+    <a href="../index.html">GO TO HOME</a> -->
+    <form>
+      <label
+        >Ім'я:
+        <input type="text" name="name" required />
+      </label>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" />
+      <input type="number" placeholder="Age" name="age" />
+      <input type="password" name="password" />
+      <!-- <input type="date" /> -->
+      <fieldset>
+        <legend>Hobbies:</legend>
+        <label
+          ><input type="checkbox" value="dancing" name="hobbies" />
+          Dancing</label
+        >
+        <label>
+          <input type="checkbox" value="singing" name="hobbies" />
+          Singing</label
+        >
+        <label>
+          <input type="checkbox" value="fishing" name="hobbies" />
+          Fishing</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose gender</legend>
+        <input name="gender" type="radio" value="male" /> Чоловік
+        <input name="gender" type="radio" value="female" /> Жінка
+      </fieldset>
+      <textarea placeholder="description" minlength="10"></textarea>
+
+      <label for="fruit">Виберіть фрукт:</label>
+      <select id="fruit" name="fruit">
+        <option value="apple">Яблуко</option>
+        <option value="banana">Банан</option>
+        <option value="orange">Апельсин</option>
+      </select>
+
+      <!-- <button type="submit">Send</button> -->
+      <button>Send</button>
+      <button type="reset">Reset</button>
+    </form>
+    <h2>Test title 1</h2>
+    <h2>Test title 2</h2>
+    <button type="button">Click</button>
   </body>
 </html>
