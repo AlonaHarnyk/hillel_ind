@@ -1,0 +1,66 @@
+div {
+  background-image: url(./images/cat.jpg);
+  background-position: center;
+  background-size: cover;
+  /* background-size: contain;
+    background-repeat: no-repeat; */
+  width: 400px;
+  height: 400px;
+}
+
+/* section {
+  background-color: aquamarine;
+  color: green;
+} */
+
+/* h1 {
+    background-color: brown;
+    color: blue;
+    background-color: yellow;
+} */
+
+/* [type="text"] {
+    border: 2px solid blue;
+}
+
+[type="email"] {
+    border: 2px solid forestgreen;
+} */
+
+/* .section {
+    background-color: orange;
+} */
+
+/* .link {
+    color: red;
+}
+
+.text{
+    color: pink;
+}
+
+#about {
+    color: blueviolet;
+} */
+
+.input-number {
+  /* border: 2px solid blue; */
+  /* border-width: 4px;
+    border-style: dotted;
+    border-color: greenyellow; */
+  border-top: 2px solid blue;
+  border-bottom: 2px solid green;
+  border-right: 2px solid red;
+  border-left: 2px solid yellow;
+}
+
+
+h1 {
+    height: 100px;
+}
+
+ul {
+    /* list-style: none; */
+    list-style-type: square;
+    list-style-position: inside;
+}
