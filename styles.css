@@ -1,66 +1,118 @@
-div {
-  background-image: url(./images/cat.jpg);
-  background-position: center;
-  background-size: cover;
-  /* background-size: contain;
-    background-repeat: no-repeat; */
-  width: 400px;
-  height: 400px;
+/* * {
+  color: red;
 }
 
-/* section {
-  background-color: aquamarine;
+p {
+  color: blue;
+}
+
+div p {
+  color: green
+}
+
+
+.example {
+  color: red;
+}
+
+div p.example .example {
+  color: orange
+}
+
+#unique {
   color: green;
-} */
-
-/* h1 {
-    background-color: brown;
-    color: blue;
-    background-color: yellow;
-} */
-
-/* [type="text"] {
-    border: 2px solid blue;
 }
 
-[type="email"] {
-    border: 2px solid forestgreen;
+.important {
+  color: yellowgreen !important
 } */
 
-/* .section {
-    background-color: orange;
-} */
-
-/* .link {
-    color: red;
+div {
+  color: orangered;
+  font-style: italic;
+  /* border: 1px solid blue; */
+  border-width: 1px;
+  border-style: solid;
+  border-color: blue;;
 }
 
-.text{
-    color: pink;
-}
-
-#about {
-    color: blueviolet;
+/* p {
+  color: red
 } */
 
-.input-number {
-  /* border: 2px solid blue; */
-  /* border-width: 4px;
-    border-style: dotted;
-    border-color: greenyellow; */
-  border-top: 2px solid blue;
-  border-bottom: 2px solid green;
-  border-right: 2px solid red;
-  border-left: 2px solid yellow;
+.container {
+  background-color: aqua;
+  /* color: blueviolet; */
+}
+
+.text {
+  background-color: bisque;
+  /* color: blueviolet; */
 }
 
 
-h1 {
-    height: 100px;
+.container, .text {
+  color: blueviolet;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-ul {
-    /* list-style: none; */
-    list-style-type: square;
-    list-style-position: inside;
+button {
+  background-color: brown;
+}
+
+button:hover, button:focus {
+  background-color: blue;
+  color: aquamarine;
+  font-weight: 700;
+}
+
+
+/* button:active {
+  background-color: green
+} */
+
+ul li:first-child {
+  font-weight: bold;
+}
+
+
+ul li:last-child {
+  color: red;
+}
+
+div button:first-child {
+  background-color: greenyellow;
+}
+
+div button:last-child {
+  background-color: blue;
+}
+
+
+div button:nth-child(4) {
+  background-color: green;
+}
+
+
+div p:first-of-type {
+  text-decoration: underline;
+}
+
+div p:last-of-type {
+  border-bottom: 1px solid black;
+}
+
+div p:nth-of-type(2) {
+  background-color: aqua;
+}
+
+p::first-letter {
+  font-size: 200%;
+  color: red;
+}
+
+p::first-line {
+  font-weight: bold;
+  color: blue;
 }
