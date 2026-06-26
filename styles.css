@@ -1,118 +1,20 @@
-/* * {
-  color: red;
+/* th, td {
+  border: 1px solid black;
 }
 
-p {
-  color: blue;
-}
-
-div p {
-  color: green
-}
-
-
-.example {
-  color: red;
-}
-
-div p.example .example {
-  color: orange
-}
-
-#unique {
-  color: green;
-}
-
-.important {
-  color: yellowgreen !important
+table {
+  border-collapse: collapse;
 } */
 
-div {
-  color: orangered;
-  font-style: italic;
-  /* border: 1px solid blue; */
-  border-width: 1px;
-  border-style: solid;
-  border-color: blue;;
-}
+/* @font-face { */
+/* font-family: 'Roboto';
+  src: url('./fonts/Roboto-VariableFont_wdth\,wght.ttf');
+  font-weight: 100 900; */
+/* font-stretch: 75% 100%; */
+/* } */
 
-/* p {
-  color: red
-} */
-
-.container {
-  background-color: aqua;
-  /* color: blueviolet; */
-}
-
-.text {
-  background-color: bisque;
-  /* color: blueviolet; */
-}
-
-
-.container, .text {
-  color: blueviolet;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-button {
-  background-color: brown;
-}
-
-button:hover, button:focus {
-  background-color: blue;
-  color: aquamarine;
-  font-weight: 700;
-}
-
-
-/* button:active {
-  background-color: green
-} */
-
-ul li:first-child {
-  font-weight: bold;
-}
-
-
-ul li:last-child {
-  color: red;
-}
-
-div button:first-child {
-  background-color: greenyellow;
-}
-
-div button:last-child {
-  background-color: blue;
-}
-
-
-div button:nth-child(4) {
-  background-color: green;
-}
-
-
-div p:first-of-type {
-  text-decoration: underline;
-}
-
-div p:last-of-type {
-  border-bottom: 1px solid black;
-}
-
-div p:nth-of-type(2) {
-  background-color: aqua;
-}
-
-p::first-letter {
-  font-size: 200%;
-  color: red;
-}
-
-p::first-line {
-  font-weight: bold;
-  color: blue;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  /* font-stretch: 70%; */
 }
