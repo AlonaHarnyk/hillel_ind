@@ -1,106 +1,64 @@
-/* * { */
-  /* box-sizing: content-box; */
-    /* box-sizing: border-box;
-} */
-
-/* p, h1, h2, h3, ul {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-} */
-
-p {
-  background-color: aquamarine;
-  /* width: 300px;
-  height: 100px; */
-  /* display: inline; */
-}
-
-/* span {
-  background-color: brown;
-  width: 300px;
-  height: 100px;
-  display: block;
-} */
+/* div { */
+/* background-color: aqua;
+  width: 350px;
+  height: 350px; */
+/* overflow: hidden; */
+/* overflow: scroll; */
+/* overflow: auto; */
+/* } */
 /* 
-div {
-  width: 200px;
-} */
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  border: 5px solid black;
-  padding: 20px;
-  /* margin: 50px; */
-  /* margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 30px;
-  margin-right: 40px; */
-  /* margin: 20px 30px 40px 50px; */
-  /* margin: 20px 40px; */
-  /* margin: 10px 20px 50px; */
-}
-
-.inner {
-  background-color: blueviolet;
-  height: 100%;
-  /* margin: 10px; */
-}
-
-/* body {
-  margin: 0;
-} */
-
-
-.wrapper {
-  display: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+.img-wrapper {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.container {
-  width: 600px;
+img { 
+  object-fit: cover;
+} */
+ main {
+  /* position: relative; */
+  padding-top: 100px;
+ }
+
+.test1 {
   background-color: aquamarine;
-  margin: 0 auto;
-  padding: 0 20px;
-  /* outline: 2px solid black; */
+  /* position: static; */
+  position: relative;
+  margin-left: 30px;
 }
 
-.btnWrapper {
-  width: 200px;
+.relative {
+  background-color: blue;
+  /* position: relative; */
+  /* bottom: 10px;
+  left: 20px;
+  top: 50px */
+}
+
+.absolute {
+  background-color: blueviolet;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+header {
+  position: fixed;
+  background-color: orangered;
+  z-index: 999;
+}
+
+.sticky {
+  background-color: yellowgreen;
+  position: sticky;
+  top: 0
+}
+
+.sticky-wrapper {
   height: 200px;
-  background-color: pink;
-  margin: 0 auto;
-  /* text-align: center; */
-}
-
-.btn {
-  /* display: block; */
-  margin: 0 auto;
-  /* display: inline-block; */
-}
-
-.text {
-  width: 70px;
+  overflow: scroll;
+  border: 2px solid black;
 }
