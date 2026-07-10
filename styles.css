@@ -1,64 +1,56 @@
-/* div { */
-/* background-color: aqua;
-  width: 350px;
-  height: 350px; */
-/* overflow: hidden; */
-/* overflow: scroll; */
-/* overflow: auto; */
-/* } */
-/* 
-.img-wrapper {
-  width: 300px;
-  height: 300px;
-  border: 2px solid black;
-  border-radius: 10px;
-  overflow: hidden;
+.container {
+  width: 700px;
+  height: 700px;
+  outline: 4px solid black;
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* flex-direction: column; */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  gap: 10px;
+  /* column-gap: 20px;
+  row-gap: 10px; */
+  /* align-content:flex-end; */
 }
 
-img { 
-  object-fit: cover;
+.item {
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  background: red;
+  /* order: 1; */
+  /* flex-grow: 1; */
+  /* align-self: flex-start; */
+}
+
+.item2 {
+  background: green;
+  /* flex-grow: 2; */
+}
+
+.item3 {
+  background: blue;
+  /* flex-shrink: 0; */
+  /* align-self: flex-end; */
+}
+
+/* .container .item:not(:last-child) {
+  margin-right: 10px;
 } */
- main {
-  /* position: relative; */
-  padding-top: 100px;
- }
-
-.test1 {
-  background-color: aquamarine;
-  /* position: static; */
-  position: relative;
-  margin-left: 30px;
-}
-
-.relative {
-  background-color: blue;
-  /* position: relative; */
-  /* bottom: 10px;
-  left: 20px;
-  top: 50px */
-}
-
-.absolute {
-  background-color: blueviolet;
-  position: absolute;
-  top: 0;
-  left: 20px;
-}
-
-header {
-  position: fixed;
-  background-color: orangered;
-  z-index: 999;
-}
-
-.sticky {
-  background-color: yellowgreen;
-  position: sticky;
-  top: 0
-}
-
-.sticky-wrapper {
-  height: 200px;
-  overflow: scroll;
-  border: 2px solid black;
-}
