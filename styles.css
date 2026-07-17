@@ -1,0 +1,51 @@
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1280px;
+  padding: 0 20px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  /* line-height: 30px; */
+  line-height: 1.25;
+  text-decoration: underline;
+  color: #222222;
+}
+
+.navigation__list {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #222222;
+  padding: 45px 0;
+  display: block;
+}
+
+
