@@ -1,51 +1,105 @@
-body {
-  font-family: 'Red Hat Display', sans-serif;
-}
-
-ul {
-  padding: 0;
+p {
   margin: 0;
-  list-style: none;
 }
 
-a {
-  text-decoration: none;
+/* .quote {
+  color: red;
 }
+
+.quote::before {
+  content: 'X';
+  color: blue;
+  font-size: 24px;
+}
+
+.quote::after {
+  content: 'X';
+  color: blue;
+  font-size: 24px;
+} */
+
+/* .logo { */
+/* color: plum;
+  text-decoration: none;
+  position: relative; */
+/* transition-property: color, background-color; */
+/* transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 500ms; */
+/* transition: color 1s linear; */
+/* } */
+
+/* .logo:hover { */
+/* color: red; */
+/* background-color: aquamarine; */
+/* transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 500ms; */
+/* } */
+
+/* 
+.logo::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: aqua;
+  position: absolute;
+  bottom: -2px;
+} */
 
 .container {
+  width: 1120px;
   margin: 0 auto;
-  width: 1280px;
-  padding: 0 20px;
+  background-color: blueviolet;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 32px;
 }
 
-.header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.item {
+  background-color: aqua;
+  height: 256px;
+  position: relative;
+  transition: transform 500ms ease-in;
 }
 
-.header__logo {
-  font-style: italic;
-  font-weight: 700;
-  font-size: 24px;
-  /* line-height: 30px; */
-  line-height: 1.25;
-  text-decoration: underline;
-  color: #222222;
+.item:hover {
+  transform: skew(-10deg);
 }
 
-.navigation__list {
-    display: flex;
-    gap: 40px;
-}
-
-.navigation__link {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #222222;
-  padding: 45px 0;
+.item::after {
+  content: '';
   display: block;
+  height: 236px;
+  width: 236px;
+  position: absolute;
+  background-color: red;
+  top: 10px;
+  left: 10px;
 }
 
+.item p {
+  text-align: center;
+  color: aliceblue;
+  background-color: brown;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  padding: 10px;
+  transition:
+    color 500ms ease-in,
+    opacity 500ms ease-in,
+    transform 500ms ease-in;
+}
 
+.item p:hover {
+  color: blue;
+  opacity: 0.8;
+  transform: translate(-50%, -50%) rotate(360deg);
+}
