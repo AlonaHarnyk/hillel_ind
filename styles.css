@@ -1,171 +1,111 @@
+h2,
+h3,
 p {
   margin: 0;
 }
 
-/* .quote {
-  color: red;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-.quote::before {
-  content: 'X';
-  color: blue;
-  font-size: 24px;
-}
-
-.quote::after {
-  content: 'X';
-  color: blue;
-  font-size: 24px;
-} */
-
-/* .logo { */
-/* color: plum;
-  text-decoration: none;
-  position: relative; */
-/* transition-property: color, background-color; */
-/* transition-property: color;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-  transition-delay: 500ms; */
-/* transition: color 1s linear; */
-/* } */
-
-/* .logo:hover { */
-/* color: red; */
-/* background-color: aquamarine; */
-/* transition-property: color;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-  transition-delay: 500ms; */
-/* } */
-
-/* 
-.logo::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: aqua;
-  position: absolute;
-  bottom: -2px;
-} */
 
 .container {
-  width: 1120px;
+  /* width: 1200px; */
+  width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
-  background-color: blueviolet;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 32px;
+  outline: 2px solid red;
 }
 
-.item {
-  background-color: aqua;
-  height: 256px;
-  position: relative;
-  transition: transform 500ms ease-in;
-  animation-name: increase;
-  animation-duration: 2s;
-  /* animation-delay: 1s; */
-}
-
-.item:hover {
-  transform: skew(-10deg);
-}
-
-.item::after {
-  content: '';
-  display: block;
-  height: 236px;
-  width: 236px;
-  position: absolute;
-  background-color: red;
-  top: 10px;
-  left: 10px;
-  border: 5px solid green;
-  animation: motion 300ms infinite linear;
-}
-
-.item p {
+h2 {
+  font-size: 20px;
   text-align: center;
-  color: aliceblue;
-  background-color: brown;
-  z-index: 100;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  padding: 10px;
-  transition:
-    color 500ms ease-in,
-    opacity 500ms ease-in,
-    transform 500ms ease-in;
-  animation: example 5s infinite;
 }
 
-.item p:hover {
-  color: blue;
-  opacity: 0.8;
-  transform: translate(-50%, -50%) rotate(360deg);
+li {
+  background-color: beige;
+  width: 100%;
 }
 
-@keyframes increase {
-  0% {
-    transform: scale(0.25);
+h3 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* @media screen and (min-width: 400px) {
+
+} */
+
+@media (min-width: 450px) {
+  .container {
+    width: 450px;
   }
 
-  /* 25% {
-    transform: scale(0.35);
+  h2 {
+    font-size: 24px;
   }
 
-  50% {
-    transform: scale(0.5);
-  } */
-
-  100% {
-    transform: scale(1);
+  li {
+    background-color: aqua;
   }
 }
 
-@keyframes motion {
-  0% {
-    border-style: dotted;
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
   }
 
-  100% {
-    border-style: dashed;
+  h2 {
+    font-size: 32px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  li {
+    background-color: blanchedalmond;
+    width: 354px;
   }
 }
 
-@keyframes example {
-  0% {
-    background-color: red;
-    left: 0;
-    top: 0;
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
 
-  25% {
+  li {
     background-color: yellow;
-    left: 200px;
-    top: 0;
+    width: 370x;
   }
 
-  50% {
-    background-color: blue;
-    left: 200px;
-    top: 200px;
+  h2 {
+    font-size: 48px;
   }
+}
 
-  75% {
-    background-color: green;
-    left: 0;
-    top: 200px;
+/* @media (min-width: 1920px) {} */
+
+@media (min-width: 400px) and (max-width: 800px) {
+  body {
+    background-color: chocolate;
   }
+}
 
-  100% {
-    background-color: red;
-    left: 0;
-    top: 0;
+@media (max-width: 1000px) {
+  h2 {
+    color: blueviolet;
+  }
+}
+
+@media print {
+  h2 {
+    display: none;
   }
 }
