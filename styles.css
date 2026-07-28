@@ -64,6 +64,9 @@ p {
   height: 256px;
   position: relative;
   transition: transform 500ms ease-in;
+  animation-name: increase;
+  animation-duration: 2s;
+  /* animation-delay: 1s; */
 }
 
 .item:hover {
@@ -79,6 +82,8 @@ p {
   background-color: red;
   top: 10px;
   left: 10px;
+  border: 5px solid green;
+  animation: motion 300ms infinite linear;
 }
 
 .item p {
@@ -96,10 +101,71 @@ p {
     color 500ms ease-in,
     opacity 500ms ease-in,
     transform 500ms ease-in;
+  animation: example 5s infinite;
 }
 
 .item p:hover {
   color: blue;
   opacity: 0.8;
   transform: translate(-50%, -50%) rotate(360deg);
+}
+
+@keyframes increase {
+  0% {
+    transform: scale(0.25);
+  }
+
+  /* 25% {
+    transform: scale(0.35);
+  }
+
+  50% {
+    transform: scale(0.5);
+  } */
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes motion {
+  0% {
+    border-style: dotted;
+  }
+
+  100% {
+    border-style: dashed;
+  }
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0;
+    top: 0;
+  }
+
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0;
+  }
+
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+
+  75% {
+    background-color: green;
+    left: 0;
+    top: 200px;
+  }
+
+  100% {
+    background-color: red;
+    left: 0;
+    top: 0;
+  }
 }
