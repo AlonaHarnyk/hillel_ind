@@ -17,32 +17,46 @@
     <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
   <body>
-    <ul>
-      <li>
-        <a href="">
-          <svg><use href="./images/sprite.svg#icon-pencil"></use></svg
-        ></a>
-      </li>
-      <li>
-        <a href="">
-          <svg><use href="./images/sprite.svg#icon-eye"></use></svg
-        ></a>
-      </li>
-      <li>
-        <a href="">
-          <svg><use href="./images/sprite.svg#icon-fire"></use></svg
-        ></a>
-      </li>
-      <li>
-        <a href="">
-          <svg><use href="./images/sprite.svg#icon-happy"></use></svg
-        ></a>
-      </li>
-      <li>
-        <a href="">
-          <svg><use href="./images/sprite.svg#icon-book"></use></svg
-        ></a>
-      </li>
-    </ul>
+    <section>
+      <div class="img-container">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/photo-desk1x.webp 1x,
+              ./images/photo-desk2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="./images/photo-desk1x.jpg 1x, ./images/photo-desk2x.jpg 2x"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/photo-tab1x.webp 1x, ./images/photo-tab2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/photo-tab1x.jpg 1x, ./images/photo-tab2x.jpg 2x"
+            type="image/jpeg"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="./images/photo-mob1x.webp 1x, ./images/photo-mob2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="./images/photo-mob1x.jpg 1x, ./images/photo-mob2x.jpg 2x"
+            type="image/jpeg"
+          />
+          <img src="./images/photo-mob1x.jpg" alt="man" />
+        </picture>
+      </div>
+    </section>
+    <div class="wrapper"></div>
   </body>
 </html>
