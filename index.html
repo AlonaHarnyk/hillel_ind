@@ -14,49 +14,32 @@
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./styles.css" /> -->
   </head>
   <body>
-    <section>
-      <div class="img-container">
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="
-              ./images/photo-desk1x.webp 1x,
-              ./images/photo-desk2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <source
-            media="(min-width: 1200px)"
-            srcset="./images/photo-desk1x.jpg 1x, ./images/photo-desk2x.jpg 2x"
-            type="image/jpeg"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="./images/photo-tab1x.webp 1x, ./images/photo-tab2x.webp 2x"
-            type="image/webp"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="./images/photo-tab1x.jpg 1x, ./images/photo-tab2x.jpg 2x"
-            type="image/jpeg"
-          />
-          <source
-            media="(max-width: 767px)"
-            srcset="./images/photo-mob1x.webp 1x, ./images/photo-mob2x.webp 2x"
-            type="image/webp"
-          />
-          <source
-            media="(max-width: 767px)"
-            srcset="./images/photo-mob1x.jpg 1x, ./images/photo-mob2x.jpg 2x"
-            type="image/jpeg"
-          />
-          <img src="./images/photo-mob1x.jpg" alt="man" />
-        </picture>
-      </div>
-    </section>
-    <div class="wrapper"></div>
+    <header>HEADER</header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">Hero</h1>
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            beatae deleniti fugit ipsam obcaecati, in neque optio veritatis
+            praesentium ex sequi, ut assumenda. Officiis porro voluptatum dolore
+            cupiditate recusandae? Incidunt expedita repudiandae nostrum qui,
+            voluptatem quas facilis sunt eum repellendus amet enim, eos nobis
+            consequuntur cumque nisi voluptatum sint aliquam.
+          </p>
+          <button class="button">Click me!</button>
+        </div>
+      </section>
+      <section class="test">
+        <h2 class="test__title">Test</h2>
+        <p class="test__text">test text</p>
+        <button class="test__button">Test button</button>
+      </section>
+    </main>
+    <footer>FOOTER</footer>
   </body>
 </html>

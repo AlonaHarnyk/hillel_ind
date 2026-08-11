@@ -1,42 +1,15 @@
-.img-container {
-  outline: 3px solid red;
-  width: 450px;
+/* :root {
+  --main-color: yellow;
+  --title-font: 24px;
+  --text-font: 16px;
 }
 
-@media (min-width: 768px) {
-  .img-container {
-    width: 354px;
-  }
+.test h2 {
+  color: var(--main-color);
+  font-size: var(--text-font);
 }
 
-@media (min-width: 1200px) {
-  .img-container {
-    width: 270px;
-  }
-}
-
-.wrapper {
-  background-image: url('./images/cat-desktop.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 700px;
-}
-
-@media (min-width: 768px) and (min-resolution: 2dppx) {
-  .wrapper {
-    background-image: url('./images/cat-desktop@2x.jpg');
-  }
-}
-
-@media (max-width: 767px) {
-  .wrapper {
-    background-image: url('./images/cat-mobile.jpg');
-  }
-}
-
-@media (max-width: 767px) and (min-resolution: 2dppx) {
-  .wrapper {
-    background-image: url('./images/cat-mobile@2x.jpg');
-  }
-}
+.test p {
+  color: var(--main-color);
+  font-size: var(--text-font);
+} */

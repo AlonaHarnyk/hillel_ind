@@ -1,0 +1,23 @@
+@use '../utils/vars';
+@use '../utils/placeholders';
+
+.test__title {
+  color: vars.$main-color;
+  font-size: vars.$title-font;
+}
+
+.test__text {
+  color: vars.$main-color;
+}
+
+.test__button {
+  //   cursor: pointer;
+  //   padding: 20px 40px;
+  //   border: 1px solid black;
+  @extend %button;
+  background-color: green;
+
+  &:hover {
+    background-color: greenyellow;
+  }
+}

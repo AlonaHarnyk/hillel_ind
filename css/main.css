@@ -1,0 +1,76 @@
+header {
+  background-color: coral;
+}
+
+.hero {
+  background-color: aqua;
+}
+.hero > .container {
+  display: flex;
+}
+
+.hero__title {
+  font-size: 32px;
+}
+
+.hero__text {
+  color: gray;
+}
+
+.button, .test__button {
+  cursor: pointer;
+  padding: 20px 40px;
+  border: 1px solid red;
+}
+
+.test__title {
+  color: green;
+  font-size: 24px;
+}
+
+.test__text {
+  color: green;
+}
+
+.test__button {
+  background-color: green;
+}
+.test__button:hover {
+  background-color: greenyellow;
+}
+
+footer {
+  background-color: bisque;
+}
+
+.button {
+  background-color: red;
+}
+.button:hover {
+  background-color: pink;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}/*# sourceMappingURL=main.css.map */

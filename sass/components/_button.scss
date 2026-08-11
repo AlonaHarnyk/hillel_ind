@@ -1,0 +1,18 @@
+@use '../utils/placeholders';
+// button {
+//   cursor: pointer;
+//   padding: 20px 40px;
+//   border: 1px solid black;
+//   background-color: red;
+// }
+// button:hover {
+//   background-color: pink;
+// }
+.button {
+  @extend %button;
+  background-color: red;
+
+  &:hover {
+    background-color: pink;
+  }
+}

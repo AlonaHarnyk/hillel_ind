@@ -1,0 +1,19 @@
+.hero {
+  background-color: aqua;
+
+  & > .container {
+    display: flex;
+  }
+}
+
+// .hero > .container {
+//   display: flex;
+// }
+
+.hero__title {
+  font-size: 32px;
+}
+
+.hero__text {
+  color: gray;
+}
