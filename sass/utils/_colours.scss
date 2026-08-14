@@ -1,0 +1,12 @@
+$colors: (
+  red: pink,
+  blue: rgb(52, 52, 224),
+  green: rgb(14, 185, 14),
+  yellow: yellow,
+);
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+}

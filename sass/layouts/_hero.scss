@@ -1,3 +1,5 @@
+@use '../utils/mixins';
+
 .hero {
   background-color: aqua;
 
@@ -11,9 +13,11 @@
 // }
 
 .hero__title {
-  font-size: 32px;
+  @include mixins.font(32px, 1.2, 900);
+  // font-size: 32px;
 }
 
 .hero__text {
   color: gray;
+  @include mixins.font(12px, 1.5, 400);
 }

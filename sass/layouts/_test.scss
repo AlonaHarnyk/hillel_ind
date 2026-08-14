@@ -1,13 +1,16 @@
-@use '../utils/vars';
-@use '../utils/placeholders';
+// @use '../utils/vars';
+// @use '../utils/placeholders';
+// @use '../utils/colours';
+@use '../utils';
+@use 'sass:map';
 
 .test__title {
-  color: vars.$main-color;
-  font-size: vars.$title-font;
+  color: utils.$main-color;
+  font-size: utils.$title-font;
 }
 
 .test__text {
-  color: vars.$main-color;
+  color: utils.$main-color;
 }
 
 .test__button {
@@ -15,7 +18,9 @@
   //   padding: 20px 40px;
   //   border: 1px solid black;
   @extend %button;
-  background-color: green;
+  // background-color: green;
+  background-color: map.get(utils.$colors, red);
+  color: map.get(utils.$colors, blue);
 
   &:hover {
     background-color: greenyellow;
