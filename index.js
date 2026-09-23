@@ -1,60 +1,28 @@
-// // ❗️❗️❗️ Оголошення змінних
+// <, >, <=, >=, ==, ===, !=, !==
 
-// const a = "variable"; // ініціалізуємо завжди зі значенням
-// a = "new variable"; // отримаємо в консолі TypeError, адже переприсвоювати значення змінним, оголошеним через const, не можна. Важливо: якщо цей рядок не закоментувати, скрипт запнеться на помилці і далі не виконуватиметься.
-// let b; // можемо ініціалізувати без присвоєння значення;
-// console.log(b);
-// b = "one more variable"; // значення може бути присвоєно пізніше, після ініціалізації;
-// console.log(b);
+// ❗️❗️❗️ Загальні правила порівняння
 
-// let a;
+// Результатом порівняння буде булеве значення.
 
-// console.log(a);
+// При порівнянні різних типів JavaScript може приводити операнди
+// до числового типу (для ==, !=, <, >, <=, >=).
 
-// a = 10;
+// === та !== не виконують приведення типів.
 
-// console.log(a);
+// null дорівнює тільки null та undefined при нестрогому порівнянні:
+// null == null → true
+// null == undefined → true
 
-// a = 20;
+// undefined дорівнює тільки undefined та null при нестрогому порівнянні:
+// undefined == undefined → true
+// undefined == null → true
 
-// console.log(a);
+// NaN не дорівнює нічому, навіть самому собі:
+// NaN === NaN → false
+// NaN == NaN → false
 
-// a = 100;
-
-// console.log(a);
-
-// ❗️❗️❗️ Примітивний типи
-
-// number
-// string
-// boolean
-// null
-// undefined
-// bigint
-// symbol
-
-// const a = null;
-
-// console.log(typeof a);
-
-// ❗️❗️❗️ Взаємодія з користувачем
-
-// // - виведення даних:
-
-// console.log('Hello!');
-// alert('Hello!');
-
-// // - отримання даних:
-
-// const answer = confirm('Is your name Ivan?'); // користувач може відповісти так або відхилити питання
-// console.log(answer);
-// prompt('What is your name?'); // користувач  може ввести якісь дані або відхилити питання
-// const age = prompt('How old are you?');
-// console.log(age);
-// // console.log(typeof age);
-
-// const num = Number(age);
-// console.log(num);
+// Якщо обидва операнди — рядки, вони порівнюються посимвольно
+// за значеннями Unicode.
 
 // ❗️❗️❗️ Правила приведення різних типів до числа:
 
@@ -65,61 +33,78 @@
 // // undefined --> NaN
 // // не порожній рядок --> якщо рядок складається лише з цифр, відбувається приведення до числа. В іншому випадку - NaN.
 
-// ❗️❗️❗️ Number.isNaN / isNaN
+// console.log(null == 0); // false
+// console.log(undefined == 0); // false
+// console.log(undefined == null); // true
+// console.log('123' == 123); // true
+// console.log(4 == 5); // false
+// console.log('123' === 123); // false
+// console.log(null === null); // true
+// console.log(2 + 2 === 4); // true
+// console.log(NaN === NaN); // false
+// console.log(undefined === null); // false
+// console.log('4' != 4); // false
+// console.log('4' !== 4); // true
 
-// const a = 123;
-// const b = 'qwerty';
-
-// // console.log(Number.isNaN(a)); // false
-// console.log(Number.isNaN(b)); // false
-
-// // const toNumber = Number(b);
-// // console.log(toNumber); // NaN
-// // console.log(Number.isNaN(toNumber)); // true
-
-// console.log(isNaN(b)); // true
-
-// const num1 = 5;
-// const num2 = 10;
-// const sum = num1 + num2;
-// console.log(sum);
-
-// console.log(10 - 5);
-// console.log(2 * 5);
-// console.log(10 / 5);
-
-// let value = 5;
-
-// value = value + 10;
-// console.log(value); // 15
-// value = value + 10;
-// console.log(value); // 25
-
-// value += 10;
-// console.log(value); // 15
-// value += 10;
-// console.log(value); // 25
-
-// let value1 = 10;
-
-// value1 = value1 - 2;
-// console.log(value1); // 8
-// value1 = value1 - 2;
-// console.log(value1); // 6
-
-// value1 -= 2;
-// console.log(value1); // 8
-// value1 -= 2;
-// console.log(value1); // 6
-
-// const num1 = Number.parseInt('56823.38erkjgvberk');
-// console.log(num1);
-// const num2 = Number.parseFloat('56823.38erkjgvberk');
-// console.log(num2);
-
-// const a = 0.1 + 0.2;
-// console.log(a);
-// console.log(a.toFixed(1));
-// const b = 0.3 + 0.6;
+// ❗️❗️❗️ Приведення до числа
+// const a = '5';
+// const b = Number(a);
+// const c = +a;
 // console.log(b);
-// console.log(b.toFixed(1));
+// console.log(c);
+
+// ❗️❗️❗️ Приведення до рядка
+// const num = 123;
+// const str1 = String(num);
+// console.log(str1);
+// const str2 = num + '';
+// console.log(str2);
+
+// ❗️❗️❗️ Шаблонні рядки
+// const userName = prompt('What is your name?');
+// console.log(userName);
+
+// const text = 'My name is Alona';
+// const text1 = `My name is ${userName}`;
+
+// console.log(text1);
+
+// const age = prompt('How old are you?');
+// console.log(age);
+
+// const text2 = `I'm ${age} years old`;
+// console.log(text2);
+
+// // ❗️❗️❗️ length
+// const a = 'erjejnretlknhkt';
+// console.log(a.length); // довжина
+
+// ❗️❗️❗️ Методи рядків
+
+// const word = 'tEsT';
+// console.log(word.toLowerCase()); // test
+// console.log(word.toUpperCase()); // TEST
+
+const word1 = 'superjavascript';
+// console.log(word1.includes('super')); // true
+// console.log(word1.includes('html')); // false
+
+// console.log(word1.indexOf('java')); // 5
+// console.log(word1.indexOf('html')); // -1
+// console.log(word1.indexOf("a")); // 6
+// console.log(word1.lastIndexOf("a")); // 8
+
+// const word2 = '    string ';
+// console.log(word2.trim());
+
+// const word3 = word1.slice();
+// console.log(word3); // копія
+// console.log(word1.slice(0)); // копія
+// console.log(word1.slice(0, word1.length)); // копію
+
+// console.log(word1.slice(5)); //javascript
+// console.log(word1.slice(0, 5)); //super
+
+// console.log(word1[5]); // j
+// console.log(word1[0]); // s
+// console.log(word1[word1.length - 1]); // t
