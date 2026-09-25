@@ -1,110 +1,136 @@
-// <, >, <=, >=, ==, ===, !=, !==
+// ❗️❗️❗️ Операції з приведенням типів
 
-// ❗️❗️❗️ Загальні правила порівняння
+// console.log(2 + 5 + '' + 1 + 0 - 10); // 700
+// console.log('710bjk' - 10); // NaN
+// console.log('' + 1 - 0); // 1
+// console.log(true + false); // 1
+// console.log(true + ''); // 'true'
+// console.log(true + 'false'); // 'truefalse'
+// console.log(true - 'false'); // NaN
+// console.log(6 / '3'); // 2
+// console.log('2' * '3'); // 6
+// console.log(4 + 5 + 'px'); // '9px'
+// console.log('$' + 4 + 5); // '$45'
+// console.log('4' - 2); // 2
+// console.log('4' + 2); // '42'
+// console.log('4' / 2); // 2
+// console.log('4px' - 2); // NaN
+// console.log(7 / 0); // Infinity
+// console.log('  -9  ' + 5); // '  -9  5'
 
-// Результатом порівняння буде булеве значення.
+// // ❗️❗️❗️ Приведення до boolean
+// const a = 5;
+// console.log(Boolean(a));
+// console.log(!!a);
 
-// При порівнянні різних типів JavaScript може приводити операнди
-// до числового типу (для ==, !=, <, >, <=, >=).
+// (falsy) значення, що приводяться до false у логічному перетворенні:
+// 0
+// NaN
+// null
+// undefined
+// порожній рядок
+// false
 
-// === та !== не виконують приведення типів.
+// Абсолютно все інше приводиться до true.
 
-// null дорівнює тільки null та undefined при нестрогому порівнянні:
-// null == null → true
-// null == undefined → true
+// ❗️❗️❗️  Логічні операторы (&&,  ||,  !)
 
-// undefined дорівнює тільки undefined та null при нестрогому порівнянні:
-// undefined == undefined → true
-// undefined == null → true
+// У логічних операціях  відбуваєтьмя приведення типів операндів до true або false.
 
-// NaN не дорівнює нічому, навіть самому собі:
-// NaN === NaN → false
-// NaN == NaN → false
+// && - запинається на false
+// Якщо всі операнди були приведені до true, повертається остання.
+// Якщо результат приведення операнди до буля false, перевірка зупиняється та повертається вихідне значення цього операнда.
 
-// Якщо обидва операнди — рядки, вони порівнюються посимвольно
-// за значеннями Unicode.
+// || - запинається на true
+// Повертає перше правдиве (приведене до true) значення або останнє, якщо таке truthy значення не знайдено.
 
-// ❗️❗️❗️ Правила приведення різних типів до числа:
+// ! - інвертує true в false, або false в true
 
-// // true --> 1
-// // false --> 0
-// // '', а також рядок з пробілами --> 0
-// // null --> 0
-// // undefined --> NaN
-// // не порожній рядок --> якщо рядок складається лише з цифр, відбувається приведення до числа. В іншому випадку - NaN.
+// console.log(5 && 'test'); // 'test'
+// console.log(0 && 6); // 0
 
-// console.log(null == 0); // false
-// console.log(undefined == 0); // false
-// console.log(undefined == null); // true
-// console.log('123' == 123); // true
-// console.log(4 == 5); // false
-// console.log('123' === 123); // false
-// console.log(null === null); // true
-// console.log(2 + 2 === 4); // true
-// console.log(NaN === NaN); // false
-// console.log(undefined === null); // false
-// console.log('4' != 4); // false
-// console.log('4' !== 4); // true
+// console.log(5 || 'test'); // 5
+// console.log(0 || 6); // 6
 
-// ❗️❗️❗️ Приведення до числа
-// const a = '5';
-// const b = Number(a);
-// const c = +a;
-// console.log(b);
-// console.log(c);
+// console.log(!5); // false
+// console.log(!0); // true
 
-// ❗️❗️❗️ Приведення до рядка
-// const num = 123;
-// const str1 = String(num);
-// console.log(str1);
-// const str2 = num + '';
-// console.log(str2);
+// console.log(true && 3); // 3
+// console.log(false && 3); // false
+// console.log(false && false); // false
+// console.log(true && 4 && 'kiwi'); // 'kiwi'
+// console.log(true && '' && 'kiwi'); // ''
+// console.log(true && " " && "kiwi"); // 'kiwi'
+// console.log(true && 0 && 'kiwi'); // 0
+// console.log(true || 3); // true
+// console.log(true || 3 || 4); // true
+// console.log(true || false || 7); // true
+// console.log(false || true || 7); // true
+// console.log(null || 2 || undefined); // 2
+// console.log((1 && null && 2) > 0); // false
+// console.log(null || (2 && 3) || 4); // 3
+// console.log(null || (null && 3) || 4); // 4
 
-// ❗️❗️❗️ Шаблонні рядки
-// const userName = prompt('What is your name?');
-// console.log(userName);
+// ?? - оператор нульового злиття
 
-// const text = 'My name is Alona';
-// const text1 = `My name is ${userName}`;
+// console.log(null ?? 1); // 1;
+// console.log(undefined ?? 1); // 1
+// console.log(false ?? 1); // false
+// console.log(0 ?? 1); // false
 
-// console.log(text1);
+// ❗️❗️❗️ Оператори розгалудження
 
-// const age = prompt('How old are you?');
-// console.log(age);
+// const number1 = Number(prompt('Please, enter a number 1'));
+// const number2 = Number(prompt('Please, enter a number 2'));
 
-// const text2 = `I'm ${age} years old`;
-// console.log(text2);
+// if (number1 > number2) {
+//   console.log('+');
+// }
 
-// // ❗️❗️❗️ length
-// const a = 'erjejnretlknhkt';
-// console.log(a.length); // довжина
+// if (number1 < number2) {
+//   console.log('-');
+// }
 
-// ❗️❗️❗️ Методи рядків
+// if (number1 > number2) {
+//   console.log('+');
+// } else {
+//   console.log('-');
+// }
 
-// const word = 'tEsT';
-// console.log(word.toLowerCase()); // test
-// console.log(word.toUpperCase()); // TEST
+// if (number1 > number2) {
+//   console.log('+');
+// } else if (number1 < number2) {
+//   console.log('-');
+// } else if (number1 === number2) {
+//   console.log('=');
+// }
 
-const word1 = 'superjavascript';
-// console.log(word1.includes('super')); // true
-// console.log(word1.includes('html')); // false
+// if (number1 > number2) {
+//   console.log('+');
+// } else if (number1 < number2) {
+//   console.log('-');
+// } else {
+//   console.log('=');
+// }
 
-// console.log(word1.indexOf('java')); // 5
-// console.log(word1.indexOf('html')); // -1
-// console.log(word1.indexOf("a")); // 6
-// console.log(word1.lastIndexOf("a")); // 8
+// if (number1 === number2) {
+//   console.log("=");
+// } else {
+//   if (number1 > number2) {
+//     console.log("+");
+//   } else {
+//     console.log("-");
+//   }
+// }
 
-// const word2 = '    string ';
-// console.log(word2.trim());
+// if (5 && true) {
+//   console.log('here1');
+// }
 
-// const word3 = word1.slice();
-// console.log(word3); // копія
-// console.log(word1.slice(0)); // копія
-// console.log(word1.slice(0, word1.length)); // копію
+// if (false || 0) {
+//   console.log('here2');
+// }
 
-// console.log(word1.slice(5)); //javascript
-// console.log(word1.slice(0, 5)); //super
-
-// console.log(word1[5]); // j
-// console.log(word1[0]); // s
-// console.log(word1[word1.length - 1]); // t
+// if (!null) {
+//   console.log('here3');
+// }
