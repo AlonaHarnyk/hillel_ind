@@ -1,163 +1,143 @@
-//  ❗️❗️❗️ Functions
+// ❗️❗️❗️ String method
 
-// function add(number1, number2) {
-//   const sum = number1 + number2;
-//   console.log(sum);
-// }
+// split
 
-// add(10, 20);
+// const string = 't-e-s-t';
+// console.log(string.split('-')); // ['t', 'e', 's', 't']
 
-// add(3, 7);
+// const string2 = 'test';
+// console.log(string2.split('')); // ['t', 'e', 's', 't']
 
-// function add1(number1, number2) {
-//   //   return number1 + number2;
-//   const sum = number1 + number2;
-//   return sum;
-// }
+// const string3 =
+//   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae!';
+// console.log(string3.split(' ')); // ['t', 'e', 's', 't']
 
-// // let sum = add1(10, 20);
-// // console.log(sum);
+// ❗️❗️❗️ Array methods
 
-// // sum += 10;
+// join
 
-// // console.log(sum);
+// const arr1 = ['a', 'b', 'c'];
+// console.log(arr1.join('')); // 'abc'
+// console.log(arr1.join('-')); // 'abc'
+// console.log(arr1.join('*')); // 'abc'
 
-// console.log(add1(3, 7));
+// includes
+// console.log(arr1.includes('a')); // true
+// console.log(arr1.includes('y')); // false
 
-// function add2(number1, number2) {
-//   const sum = number1 + number2;
-//   console.log(sum);
-//   return sum;
-// }
+// // indexOf
+// console.log(arr1.indexOf("a")); // 0
+// console.log(arr1.indexOf("y")); // -1
 
-// const result = add2(4, 16);
-// console.log(result);
+// push
+// const arr2 = [];
+// console.log(arr2.push(0)); // 1 (length)
+// console.log(arr2);
+// const length = arr2.push(1, 2, 3);
+// console.log(arr2); // [0, 1, 2, 3]
+// console.log(length); // 4
 
-// function add3(number1, number2) {
-//   const sum = number1 + number2;
-//   return sum;
-//   console.log(sum);
-// }
+// // // pop;
+// const elem = arr2.pop();
+// console.log(arr2); // [0, 1, 2,]
+// console.log(elem); // 3
 
-// function compare(num1, num2) {
-//   if (num1 > num2) {
-//     return '>';
-//   } else {
-//     return '<';
-//   }
-// }
+// // // unshift
+// const length1 = arr2.unshift(5, 6, 7);
+// console.log(arr2); // [5, 6, 7, 0, 1, 2]
+// console.log(length1); // 6
 
-// console.log(compare(10, 5));
+// // // shift
+// const elem1 = arr2.shift();
+// console.log(arr2); // [6, 7, 0, 1, 2]
+// console.log(elem1); // 5
 
-// const res = testReturn(5, 10);
-// console.log(res);
+// // slice
+// const arr3 = arr2.slice(0, 2);
+// console.log(arr2); // [6, 7, 0, 1, 2]
+// console.log(arr3); // [6, 7]
 
-// function testReturn(num1, num2) {
-//   if (num1 > num2) {
-//     console.log('here');
-//     return;
-//   }
-//   console.log('there');
-// }
+// splice
+// const arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const deleted = arr4.splice(5, 2);
+// console.log(arr4); // [1, 2, 3, 4, 5, 8, 9]
+// console.log(deleted); // [6, 7]
 
-// const res = testReturn(10, 5);
-// console.log(res);
+// const arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const deleted1 = arr5.splice(5, 0, 11, 12, 13, 14, 15);
+// // console.log(arr5); // [1, 2, 3, 4, 5, 11, 12, 13, 14, 15, 6, 7, 8, 9]
+// // console.log(deleted1); // []
 
-// const res1 = testReturn1(5, 10);
-// console.log(res1);
+// const arr6 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const deleted2 = arr6.splice(5, 2, 11, 12);
+// // console.log(arr6); //[1, 2, 3, 4, 5, 11, 12, 8, 9]
+// // console.log(deleted2); //[6, 7]
 
-// const testReturn1 = function (num1, num2) {
-//   if (num1 > num2) {
-//     console.log('here');
-//     return;
-//   }
-//   console.log('there');
+// ❗️❗️❗️ Objects
+
+const book = {
+  title: 'The Last Kingdom',
+  author: 'Bernard Cornwell',
+  genres: ['historical prose', 'adventure'],
+  isPublic: false,
+  rating: 0,
+  data: {
+    a: 1,
+    b: {
+      test: 'test!!!',
+      test1: {
+        d: 10,
+      },
+    },
+    c: 3,
+  },
+};
+
+// const book1 = {
+//   title: 'The Last Kingdom',
+//   author: 'Bernard Cornwell',
+//   genres: ['historical prose', 'adventure'],
+//   isPublic: false,
+//   rating: 0,
 // };
 
-// const res = testReturn1(10, 5);
-// console.log(res);
+// console.log(book === book1);
 
-//  ❗️❗️❗️ Arrays []
+// const a = book.title;
+// console.log(a);
+// console.log(book.genres);
+// console.log(book.data.a); // 1
+// console.log(book.data.b.test);
 
-// const a = 5;
+// console.log(book['genres']);
+// console.log(book[genres]); // error
 
-// const array = [1, 2, 3, 'a', 'b', true, [1, 2], a];
+// const x = 'author';
 
-// console.log(array.length);
+// console.log(book['author']); //  "Bernard Cornwell"
+// console.log(book[x]) // "Bernard Cornwell"
 
-// console.log(array[5]);
+// console.log(book.x) // undefined
 
-// array[5] = 10;
-// console.log(array);
+// console.log(book['data']['a']); // 1
 
-// for (let i = 0; i < array.length; i += 1) {
-//   console.log(array[i]);
-// }
+// console.log(book);
 
-// for (let item of array) {
-//   console.log(item);
-//   if (item === 'a') {
-//     break;
-//   }
-// }
+// book.isPublic = true;
 
-// const b = 5;
-// const c = 5;
-// console.log(b === c); //true
-// const d = b;
-// console.log(d === b); //true
+// console.log(book);
 
-const arr1 = [1, 2, 3];
-const arr2 = [1, 2, 3];
-// console.log(arr1 === arr2); // false
-// console.log([1, 2, 3] === [1, 2, 3]); // false
-const arr3 = arr1;
-// console.log(arr3 === arr1); // true
+// book.genres.push('tale');
+// console.log(book);
 
-arr1[0] = 10;
-// console.log(arr1); // [10, 2, 3]
-// console.log(arr3); // [10, 2, 3]
+// console.log(book.price);
 
-arr3[2] = 5;
+// book.price = '10$';
+// book['price'] = '10$';
+// console.log(book);
 
-// console.log(arr1); // [10, 2, 5];
+// book.data.d = 'd';
 
-arr1.length = 0;
+// console.log(book);
 
-// console.log(arr1); // []
-// console.log(arr3); // []
-
-arr1[5] = 100;
-
-// console.log(arr1);
-
-// for (let item of arr1) {
-//   console.log(item);
-// }
-// console.log(arr1[0]); // undefined
-// console.log(arr1[200]); // undefined
-
-// let arr4 = [1, 3, 5];
-// let arr5 = arr4;
-
-// arr4 = [4, 5, 6];
-
-// console.log(arr4); // [4, 5, 6]
-// console.log(arr5); // [1, 3, 5]
-
-// console.log(arr4 == arr5); // false
-
-// arr5 = arr4;
-
-// console.log(arr4); // [4, 5, 6]
-// console.log(arr5); // [4, 5, 6]
-
-// const e = [1, 2, [3, 4]];
-// const f = [1, 2, [3, 4]];
-
-// console.log(e === f); // false
-
-// console.log(e[0] === f[0]); // true
-// console.log(e[2] === f[2]); // false
-
-// console.log(e[2][0]); // 3
+// book.x.y = 'test'; // error (// book.x = {}; first)
