@@ -1,143 +1,160 @@
-// ❗️❗️❗️ String method
+// const name = 'Alona';
+// const age = 35;
+// const a = 'Kyiv';
 
-// split
+// // const user = {
+// //   name: name,
+// //   age: age,
+// // };
 
-// const string = 't-e-s-t';
-// console.log(string.split('-')); // ['t', 'e', 's', 't']
-
-// const string2 = 'test';
-// console.log(string2.split('')); // ['t', 'e', 's', 't']
-
-// const string3 =
-//   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae!';
-// console.log(string3.split(' ')); // ['t', 'e', 's', 't']
-
-// ❗️❗️❗️ Array methods
-
-// join
-
-// const arr1 = ['a', 'b', 'c'];
-// console.log(arr1.join('')); // 'abc'
-// console.log(arr1.join('-')); // 'abc'
-// console.log(arr1.join('*')); // 'abc'
-
-// includes
-// console.log(arr1.includes('a')); // true
-// console.log(arr1.includes('y')); // false
-
-// // indexOf
-// console.log(arr1.indexOf("a")); // 0
-// console.log(arr1.indexOf("y")); // -1
-
-// push
-// const arr2 = [];
-// console.log(arr2.push(0)); // 1 (length)
-// console.log(arr2);
-// const length = arr2.push(1, 2, 3);
-// console.log(arr2); // [0, 1, 2, 3]
-// console.log(length); // 4
-
-// // // pop;
-// const elem = arr2.pop();
-// console.log(arr2); // [0, 1, 2,]
-// console.log(elem); // 3
-
-// // // unshift
-// const length1 = arr2.unshift(5, 6, 7);
-// console.log(arr2); // [5, 6, 7, 0, 1, 2]
-// console.log(length1); // 6
-
-// // // shift
-// const elem1 = arr2.shift();
-// console.log(arr2); // [6, 7, 0, 1, 2]
-// console.log(elem1); // 5
-
-// // slice
-// const arr3 = arr2.slice(0, 2);
-// console.log(arr2); // [6, 7, 0, 1, 2]
-// console.log(arr3); // [6, 7]
-
-// splice
-// const arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// const deleted = arr4.splice(5, 2);
-// console.log(arr4); // [1, 2, 3, 4, 5, 8, 9]
-// console.log(deleted); // [6, 7]
-
-// const arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// const deleted1 = arr5.splice(5, 0, 11, 12, 13, 14, 15);
-// // console.log(arr5); // [1, 2, 3, 4, 5, 11, 12, 13, 14, 15, 6, 7, 8, 9]
-// // console.log(deleted1); // []
-
-// const arr6 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// const deleted2 = arr6.splice(5, 2, 11, 12);
-// // console.log(arr6); //[1, 2, 3, 4, 5, 11, 12, 8, 9]
-// // console.log(deleted2); //[6, 7]
-
-// ❗️❗️❗️ Objects
-
-const book = {
-  title: 'The Last Kingdom',
-  author: 'Bernard Cornwell',
-  genres: ['historical prose', 'adventure'],
-  isPublic: false,
-  rating: 0,
-  data: {
-    a: 1,
-    b: {
-      test: 'test!!!',
-      test1: {
-        d: 10,
-      },
-    },
-    c: 3,
-  },
-};
-
-// const book1 = {
-//   title: 'The Last Kingdom',
-//   author: 'Bernard Cornwell',
-//   genres: ['historical prose', 'adventure'],
-//   isPublic: false,
-//   rating: 0,
+// const user = {
+//   name,
+//   age,
+//   city: a,
 // };
 
-// console.log(book === book1);
+// console.log(user);
 
-// const a = book.title;
+// const student = {
+//   name: 'John',
+//   email: 'john@gmail.com',
+//   homeWorkResults: [],
+//   getName() {
+//     // return `Student name is ${student.name}`;
+//     return `Student name is ${this.name}`;
+//   },
+//   getEmail() {
+//     // console.log(`Student email is ${student.email}`);
+//     console.log(`Student email is ${this.email}`);
+//   },
+//   addHomeworkResults(topic, success) {
+//     const homework = {
+//       topic,
+//       success,
+//     };
+//     // student.homeWorkResults.push(homework);
+//     this.homeWorkResults.push(homework);
+//   },
+// };
+
+// console.log(student.name);
+// console.log(student.getName());
+// student.getEmail();
+// student.addHomeworkResults('JS', false);
+// student.addHomeworkResults('HTML', true);
+// console.log(student.homeWorkResults);
+
+// for (const key in user) {
+//   console.log(key);
+//   console.log(user[key]);
+// }
+
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// console.log(Object.entries(user));
+
+// const animal = {
+//   eyes: 2,
+//   legs: 4,
+// };
+
+// console.log(animal);
+
+// const dog = Object.create(animal);
+
+// console.log(dog);
+
+// dog.color = 'browm';
+
+// console.log(dog);
+
+// for (const key in dog) {
+//   if (dog.hasOwnProperty(key)) {
+//     console.log(key);
+//   }
+// }
+
+// console.log(Object.getOwnPropertyDescriptors(user, 'name'));
+
+// Object.defineProperty(user, 'job', {
+//   value: 'developer',
+//   writable: false,
+//   configurable: false,
+//   enumerable: false,
+// });
+
+// console.log(user);
+
+// console.log(Object.keys(user));
+
+// // user.job = 'tutor'; // error
+// user.city = 'Lviv';
+
+// delete user.city;
+// delete user.job; // error
+
+// console.log(user);
+
+// const book = {
+//   title: 'Test title',
+//   author: 'Test author',
+//   price: '3$',
+//   test: {
+//     a: 'test a',
+//     b: 'test b',
+//     c: 'test c',
+//   },
+//   rating: 5,
+// };
+
+// console.log(book.title);
+// console.log(book.author);
+// console.log(book['price']);
+
+// const {
+//   title,
+//   author: name,
+//   price,
+//   test: { a, b, c },
+//   rating = 8,
+// } = book;
+
+// console.log(title);
+// console.log(name);
+// console.log(price);
 // console.log(a);
-// console.log(book.genres);
-// console.log(book.data.a); // 1
-// console.log(book.data.b.test);
-
-// console.log(book['genres']);
-// console.log(book[genres]); // error
-
-// const x = 'author';
-
-// console.log(book['author']); //  "Bernard Cornwell"
-// console.log(book[x]) // "Bernard Cornwell"
-
-// console.log(book.x) // undefined
-
-// console.log(book['data']['a']); // 1
+// console.log(b);
+// console.log(c);
+// console.log(rating);
 
 // console.log(book);
 
-// book.isPublic = true;
+const users = [
+  { name: 'Olha', age: 19 },
+  { name: 'Ann', age: 45 },
+];
 
-// console.log(book);
+// for (const user of users) {
+//   console.log(user.name);
+//   console.log(user.age);
+// }
 
-// book.genres.push('tale');
-// console.log(book);
+// for (const user of users) {
+//   const { name, age } = user;
+//   console.log(name);
+//   console.log(age);
+// }
 
-// console.log(book.price);
+// for (const { name, age } of users) {
+//   console.log(name);
+//   console.log(age);
+// }
 
-// book.price = '10$';
-// book['price'] = '10$';
-// console.log(book);
+// const numbers = ['red', 'green', 'blue'];
 
-// book.data.d = 'd';
+// // const [red, green, blue] = numbers;
+// const [, , blue] = numbers;
 
-// console.log(book);
+// console.log(blue);
 
-// book.x.y = 'test'; // error (// book.x = {}; first)
+// console.log(numbers[2]);
