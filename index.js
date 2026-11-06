@@ -1,160 +1,170 @@
-// const name = 'Alona';
-// const age = 35;
-// const a = 'Kyiv';
+// SPREAD ...
 
-// // const user = {
-// //   name: name,
-// //   age: age,
-// // };
+// const arr1 = [1, 2, 3];
+// const arr2 = [...arr1];
 
-// const user = {
-//   name,
-//   age,
-//   city: a,
-// };
+// console.log(arr2);
 
-// console.log(user);
+// const arr3 = [4, 5, [8, 9]];
+// const arr4 = [6, 7];
 
-// const student = {
-//   name: 'John',
-//   email: 'john@gmail.com',
-//   homeWorkResults: [],
-//   getName() {
-//     // return `Student name is ${student.name}`;
-//     return `Student name is ${this.name}`;
-//   },
-//   getEmail() {
-//     // console.log(`Student email is ${student.email}`);
-//     console.log(`Student email is ${this.email}`);
-//   },
-//   addHomeworkResults(topic, success) {
-//     const homework = {
-//       topic,
-//       success,
-//     };
-//     // student.homeWorkResults.push(homework);
-//     this.homeWorkResults.push(homework);
-//   },
-// };
+// // const arr5 = [...arr3, ...arr4, ...arr4];
+// const arr5 = [arr3[0], arr3[1], ...arr3[2], ...arr4];
 
-// console.log(student.name);
-// console.log(student.getName());
-// student.getEmail();
-// student.addHomeworkResults('JS', false);
-// student.addHomeworkResults('HTML', true);
-// console.log(student.homeWorkResults);
+// console.log(arr5);
 
-// for (const key in user) {
-//   console.log(key);
-//   console.log(user[key]);
+// // const arr6 = arr3.concat(arr4);
+
+// // console.log(arr6);
+
+// const arr7 = [10, 20, 30];
+// const arr8 = [40, 50];
+
+// arr7.push(arr8[0]);
+// arr7.push(arr8[1]);
+
+// arr7.push(arr8[0], arr8[1]);
+
+// arr7.push(...arr8);
+
+// console.log(arr7);
+
+// const obj1 = { a: 1, b: 2 };
+// const obj2 = { c: 3, d: 4 };
+// const obj3 = { ...obj1, ...obj2 };
+
+// console.log(obj3);
+
+// const obj4 = { a: 1, b: 2 };
+// const obj5 = { c: 3, d: 4 };
+// const obj6 = { b: 10, c: 20, e: 30 };
+// const obj7 = { ...obj6, ...obj5, ...obj4, b: 50 };
+
+// console.log(obj7);
+
+// REST ...
+
+// function add(a, b) {
+//   console.log(a + b);
 // }
 
-// console.log(Object.keys(user));
-// console.log(Object.values(user));
-// console.log(Object.entries(user));
+// add(1, 2);
 
-// const animal = {
-//   eyes: 2,
-//   legs: 4,
-// };
-
-// console.log(animal);
-
-// const dog = Object.create(animal);
-
-// console.log(dog);
-
-// dog.color = 'browm';
-
-// console.log(dog);
-
-// for (const key in dog) {
-//   if (dog.hasOwnProperty(key)) {
-//     console.log(key);
+// function add(...args) {
+//   // console.log(arguments);
+//   console.log(args);
+//   let sum = 0;
+//   // for (let i = 0; i < args.length; i++) {
+//   //   sum += args[i];
+//   // }
+//   for (let num of args) {
+//     sum += num;
 //   }
+//   console.log(sum);
 // }
 
-// console.log(Object.getOwnPropertyDescriptors(user, 'name'));
+// add(1, 2);
 
-// Object.defineProperty(user, 'job', {
-//   value: 'developer',
-//   writable: false,
-//   configurable: false,
-//   enumerable: false,
-// });
+// add(1, 2, 5);
 
-// console.log(user);
+// add(1, 2, 3, 4, 5);
 
-// console.log(Object.keys(user));
+// const array = [1, 2, 3, 4, 5];
+// const [one, two, ...arr] = [1, 2, 3, 4, 5];
 
-// // user.job = 'tutor'; // error
-// user.city = 'Lviv';
+// console.log(arr);
 
-// delete user.city;
-// delete user.job; // error
-
-// console.log(user);
-
-// const book = {
+// const object = {
 //   title: 'Test title',
 //   author: 'Test author',
 //   price: '3$',
-//   test: {
-//     a: 'test a',
-//     b: 'test b',
-//     c: 'test c',
-//   },
 //   rating: 5,
 // };
 
-// console.log(book.title);
-// console.log(book.author);
-// console.log(book['price']);
+// const { title, price, ...obj } = object;
 
-// const {
-//   title,
-//   author: name,
-//   price,
-//   test: { a, b, c },
-//   rating = 8,
-// } = book;
+// console.log(obj);
 
-// console.log(title);
-// console.log(name);
-// console.log(price);
-// console.log(a);
-// console.log(b);
-// console.log(c);
-// console.log(rating);
+// const add = function (a, b) {
+//   return a + b;
+// };
 
-// console.log(book);
+// const add = (a, b) => {
+//   return a + b;
+// };
 
-const users = [
-  { name: 'Olha', age: 19 },
-  { name: 'Ann', age: 45 },
-];
+// const add = (a, b) => a + b;
 
-// for (const user of users) {
-//   console.log(user.name);
-//   console.log(user.age);
+// const foo = (a, b) => {
+//   return { a, b };
+// };
+
+// const foo = (a, b) => ({ a, b });
+
+// callbacks
+
+// function f1() {
+//   const mark = Number(prompt('What is your mark?'));
+//   if (mark >= 10) {
+//     alert('It is great!');
+//   } else {
+//     alert('You can better!');
+//   }
 // }
 
-// for (const user of users) {
-//   const { name, age } = user;
-//   console.log(name);
-//   console.log(age);
+// f1();
+
+// function f2() {
+//   const mark = Number(prompt('What is your mark?'));
+//   if (mark >= 10) {
+//     alert('It is excellent mark!');
+//   } else {
+//     alert('It is bad mark!');
+//   }
 // }
 
-// for (const { name, age } of users) {
-//   console.log(name);
-//   console.log(age);
+// f2();
+
+// function f3(foo1, foo2) {
+//   const mark = Number(prompt('What is your mark?'));
+//   if (mark >= 10) {
+//     foo1();
+//   } else {
+//     foo2();
+//   }
 // }
 
-// const numbers = ['red', 'green', 'blue'];
+// function goodMark() {
+//   alert('It is excellent mark!');
+// }
 
-// // const [red, green, blue] = numbers;
-// const [, , blue] = numbers;
+// function goodMark1() {
+//   alert('It is great!');
+// }
 
-// console.log(blue);
+// function badMark() {
+//   alert('It is bad mark!');
+// }
 
-// console.log(numbers[2]);
+// function badMark1() {
+//   alert('You can better!');
+// }
+
+// f3(goodMark, badMark);
+// f3(goodMark1, badMark1);
+
+// function f3(callback) {
+//   const mark = Number(prompt('What is your mark?'));
+//   callback(mark);
+// }
+
+// function showMark(mark) {
+//   const isMarkGood = mark >= 10;
+//   if (isMarkGood) {
+//     alert('It is excellent mark!');
+//   } else {
+//     alert('It is great!');
+//   }
+// }
+
+// f3(showMark);
