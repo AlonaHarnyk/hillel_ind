@@ -1,170 +1,163 @@
-// SPREAD ...
+const users = [
+  {
+    id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    skills: ['ipsum', 'lorem'],
+    gender: 'male',
+    age: 37,
+  },
+  {
+    id: '7a3cbd18-57a1-4534-8e12-1caad921bda1',
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
+    gender: 'female',
+    age: 34,
+  },
+  {
+    id: '88beb2f3-e4c2-49f3-a0a0-ecf957a95af3',
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
+    gender: 'male',
+    age: 24,
+  },
+  {
+    id: '249b6175-5c30-44c6-b154-f120923736f5',
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    skills: ['adipisicing', 'irure', 'velit'],
+    gender: 'female',
+    age: 21,
+  },
+  {
+    id: '334f8cb3-eb04-45e6-abf4-4935dd439b70',
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    skills: ['ex', 'culpa', 'nostrud'],
+    gender: 'male',
+    age: 27,
+  },
+  {
+    id: '150b00fb-dd82-427d-9faf-2879ea87c695',
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    skills: ['non', 'amet', 'ipsum'],
+    gender: 'male',
+    age: 38,
+  },
+  {
+    id: 'e1bf46ab-7168-491e-925e-f01e21394812',
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    skills: ['lorem', 'veniam', 'culpa'],
+    gender: 'female',
+    age: 39,
+  },
+];
 
-// const arr1 = [1, 2, 3];
-// const arr2 = [...arr1];
+// I - forEach
+// const numbers = [1, 2, 3];
 
-// console.log(arr2);
-
-// const arr3 = [4, 5, [8, 9]];
-// const arr4 = [6, 7];
-
-// // const arr5 = [...arr3, ...arr4, ...arr4];
-// const arr5 = [arr3[0], arr3[1], ...arr3[2], ...arr4];
-
-// console.log(arr5);
-
-// // const arr6 = arr3.concat(arr4);
-
-// // console.log(arr6);
-
-// const arr7 = [10, 20, 30];
-// const arr8 = [40, 50];
-
-// arr7.push(arr8[0]);
-// arr7.push(arr8[1]);
-
-// arr7.push(arr8[0], arr8[1]);
-
-// arr7.push(...arr8);
-
-// console.log(arr7);
-
-// const obj1 = { a: 1, b: 2 };
-// const obj2 = { c: 3, d: 4 };
-// const obj3 = { ...obj1, ...obj2 };
-
-// console.log(obj3);
-
-// const obj4 = { a: 1, b: 2 };
-// const obj5 = { c: 3, d: 4 };
-// const obj6 = { b: 10, c: 20, e: 30 };
-// const obj7 = { ...obj6, ...obj5, ...obj4, b: 50 };
-
-// console.log(obj7);
-
-// REST ...
-
-// function add(a, b) {
-//   console.log(a + b);
+// for (let number of numbers) {
+//   //   console.log(number);
+// //   console.log(numbers.indexOf(number));
 // }
 
-// add(1, 2);
+// numbers.forEach((number, index, array) => {
+//   //   console.log(number);
+//   //   console.log(index);
+//   //   console.log(array);
+// });
 
-// function add(...args) {
-//   // console.log(arguments);
-//   console.log(args);
-//   let sum = 0;
-//   // for (let i = 0; i < args.length; i++) {
-//   //   sum += args[i];
-//   // }
-//   for (let num of args) {
-//     sum += num;
-//   }
-//   console.log(sum);
+// const numbers2 = [];
+
+// for (let num of numbers) {
+//   const doubledNum = num * 2;
+//   numbers2.push(doubledNum);
 // }
 
-// add(1, 2);
+// numbers.forEach(number => {
+//   const doubledNum = number * 2;
+//   numbers2.push(doubledNum);
+// });
 
-// add(1, 2, 5);
+// console.log(numbers2);
 
-// add(1, 2, 3, 4, 5);
+// II - map
+// const numbers = [1, 2, 3];
 
-// const array = [1, 2, 3, 4, 5];
-// const [one, two, ...arr] = [1, 2, 3, 4, 5];
+// const numbers2 = numbers.map((number, index, array) => {
+//   return number * 2;
+// });
 
-// console.log(arr);
+// console.log(numbers2);
 
-// const object = {
-//   title: 'Test title',
-//   author: 'Test author',
-//   price: '3$',
-//   rating: 5,
-// };
+// const array = ['a', 'b', 'c'];
 
-// const { title, price, ...obj } = object;
+// const array2 = array.map(item => item.toUpperCase());
 
-// console.log(obj);
+// // const array3 = array.map(item => {
+// //   item.toUpperCase();
+// // }); // масивз трьох undefined
 
-// const add = function (a, b) {
-//   return a + b;
-// };
+// console.log(array2);
 
-// const add = (a, b) => {
-//   return a + b;
-// };
+// III - find
+// const numbers = [1, 2, 3, 4, 5];
 
-// const add = (a, b) => a + b;
+// // const result = numbers.find((number, index, array) => {
+// //   return number > 3;
+// // });
 
-// const foo = (a, b) => {
-//   return { a, b };
-// };
+// // const result = numbers.find((number, index, array) => number > 3);
 
-// const foo = (a, b) => ({ a, b });
+// // console.log(result);
 
-// callbacks
+// const result1 = numbers.find((number, index, array) => number > 10);
 
-// function f1() {
-//   const mark = Number(prompt('What is your mark?'));
-//   if (mark >= 10) {
-//     alert('It is great!');
-//   } else {
-//     alert('You can better!');
-//   }
-// }
+// console.log(result1);
 
-// f1();
+// IV - filter
+// const numbers = [1, 2, 3, 4, 5];
 
-// function f2() {
-//   const mark = Number(prompt('What is your mark?'));
-//   if (mark >= 10) {
-//     alert('It is excellent mark!');
-//   } else {
-//     alert('It is bad mark!');
-//   }
-// }
+// // const filteredArray = numbers.filter((number, index, array) => {
+// //   return number > 3;
+// // });
 
-// f2();
+// // const filteredArray = numbers.filter((number, index, array) => number > 3);
 
-// function f3(foo1, foo2) {
-//   const mark = Number(prompt('What is your mark?'));
-//   if (mark >= 10) {
-//     foo1();
-//   } else {
-//     foo2();
-//   }
-// }
+// // console.log(filteredArray);
 
-// function goodMark() {
-//   alert('It is excellent mark!');
-// }
+// const filteredArray1 = numbers.filter((number, index, array) => number > 10);
 
-// function goodMark1() {
-//   alert('It is great!');
-// }
-
-// function badMark() {
-//   alert('It is bad mark!');
-// }
-
-// function badMark1() {
-//   alert('You can better!');
-// }
-
-// f3(goodMark, badMark);
-// f3(goodMark1, badMark1);
-
-// function f3(callback) {
-//   const mark = Number(prompt('What is your mark?'));
-//   callback(mark);
-// }
-
-// function showMark(mark) {
-//   const isMarkGood = mark >= 10;
-//   if (isMarkGood) {
-//     alert('It is excellent mark!');
-//   } else {
-//     alert('It is great!');
-//   }
-// }
-
-// f3(showMark);
+// console.log(filteredArray1);
