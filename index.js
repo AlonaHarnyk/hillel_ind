@@ -1,163 +1,192 @@
-const users = [
+const students = [
   {
-    id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
-    name: 'Moore Hensley',
-    email: 'moorehensley@indexia.com',
-    eyeColor: 'blue',
-    friends: ['Sharron Pace'],
-    isActive: false,
-    balance: 2811,
-    skills: ['ipsum', 'lorem'],
-    gender: 'male',
-    age: 37,
-  },
-  {
-    id: '7a3cbd18-57a1-4534-8e12-1caad921bda1',
-    name: 'Sharlene Bush',
-    email: 'sharlenebush@tubesys.com',
-    eyeColor: 'blue',
-    friends: ['Briana Decker', 'Sharron Pace'],
+    id: 'c1f3a1d2-91e2-4a5f-8b39-12ba4c0e1120',
+    name: 'Mark Spencer',
+    age: 20,
+    email: 'mark.spencer@university.edu',
+    faculty: 'Computer Science',
     isActive: true,
-    balance: 3821,
-    skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
-    gender: 'female',
-    age: 34,
+    courses: ['Algorithms', 'Math', 'Databases'],
+    averageGrade: 3.6,
+    hobbies: ['gaming', 'reading'],
+    livesInDorm: false,
+    balance: 320.5,
   },
   {
-    id: '88beb2f3-e4c2-49f3-a0a0-ecf957a95af3',
-    name: 'Ross Vazquez',
-    email: 'rossvazquez@xinware.com',
-    eyeColor: 'green',
-    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-    isActive: false,
-    balance: 3793,
-    skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
-    gender: 'male',
-    age: 24,
-  },
-  {
-    id: '249b6175-5c30-44c6-b154-f120923736f5',
-    name: 'Elma Head',
-    email: 'elmahead@omatom.com',
-    eyeColor: 'green',
-    friends: ['Goldie Gentry', 'Aisha Tran'],
+    id: 'a9e21c72-67b4-49fa-8d11-44d0d9a5e9a2',
+    name: 'Anna Kovalenko',
+    age: 19,
+    email: 'anna.kovalenko@university.edu',
+    faculty: 'History',
     isActive: true,
-    balance: 2278,
-    skills: ['adipisicing', 'irure', 'velit'],
-    gender: 'female',
+    courses: ['English Literature', 'Psychology'],
+    averageGrade: 4.2,
+    hobbies: ['reading', 'yoga', 'painting'],
+    livesInDorm: true,
+    balance: 150.0,
+  },
+  {
+    id: 'f23be9d7-4b11-4af0-9de8-cbaa01f4cfe1',
+    name: 'Nikita Orlov',
+    age: 22,
+    email: 'nikita.orlov@university.edu',
+    faculty: 'Mechanical Engineering',
+    isActive: false,
+    courses: ['Thermodynamics', 'Mechanics', 'Physics'],
+    averageGrade: 3.1,
+    hobbies: ['cars', 'gym'],
+    livesInDorm: true,
+    balance: 80.75,
+  },
+  {
+    id: 'd43fbc19-15d5-42b0-ad77-2f22e9559731',
+    name: 'Sophia Müller',
     age: 21,
-  },
-  {
-    id: '334f8cb3-eb04-45e6-abf4-4935dd439b70',
-    name: 'Carey Barr',
-    email: 'careybarr@nurali.com',
-    eyeColor: 'blue',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
+    email: 'sophia.muller@university.edu',
+    faculty: 'History',
     isActive: true,
-    balance: 3951,
-    skills: ['ex', 'culpa', 'nostrud'],
-    gender: 'male',
-    age: 27,
+    courses: ['Design Basics', '3D Modeling', 'Art History'],
+    averageGrade: 4.0,
+    hobbies: ['sketching', 'photography', 'traveling'],
+    livesInDorm: false,
+    balance: 410.0,
   },
   {
-    id: '150b00fb-dd82-427d-9faf-2879ea87c695',
-    name: 'Blackburn Dotson',
-    email: 'blackburndotson@furnigeer.com',
-    eyeColor: 'brown',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    id: 'e8b7c720-9c32-4e96-bf2d-e24bd2daaa45',
+    name: 'Liam Johnson',
+    age: 22,
+    email: 'liam.johnson@university.edu',
+    faculty: 'Computer Science',
     isActive: false,
-    balance: 1498,
-    skills: ['non', 'amet', 'ipsum'],
-    gender: 'male',
-    age: 38,
+    courses: ['Marketing', 'Finance', 'Management'],
+    averageGrade: 3.4,
+    hobbies: ['gym', 'chess'],
+    livesInDorm: false,
+    balance: 95.2,
   },
   {
-    id: 'e1bf46ab-7168-491e-925e-f01e21394812',
-    name: 'Sheree Anthony',
-    email: 'shereeanthony@kog.com',
-    eyeColor: 'brown',
-    friends: ['Goldie Gentry', 'Briana Decker'],
+    id: '9e73cc24-31fc-47d8-bb3d-b7dc0b8c5ea9',
+    name: 'Emily Carter',
+    age: 20,
+    email: 'emily.carter@university.edu',
+    faculty: 'Biology',
     isActive: true,
-    balance: 2764,
-    skills: ['lorem', 'veniam', 'culpa'],
-    gender: 'female',
-    age: 39,
+    courses: ['Genetics', 'Chemistry', 'Ecology'],
+    averageGrade: 4.5,
+    hobbies: ['hiking', 'photography', 'reading'],
+    livesInDorm: true,
+    balance: 520.0,
+  },
+  {
+    id: 'b71e4f52-7d0a-4b05-9e16-9542e0b73adb',
+    name: 'Taras Melnyk',
+    age: 22,
+    email: 'taras.melnyk@university.edu',
+    faculty: 'Computer Science',
+    isActive: false,
+    courses: ['Modern History', 'Sociology'],
+    averageGrade: 3.2,
+    hobbies: ['books', 'violin', 'reading'],
+    livesInDorm: false,
+    balance: 60.0,
   },
 ];
 
-// I - forEach
-// const numbers = [1, 2, 3];
+// every;
 
-// for (let number of numbers) {
-//   //   console.log(number);
-// //   console.log(numbers.indexOf(number));
-// }
-
-// numbers.forEach((number, index, array) => {
-//   //   console.log(number);
-//   //   console.log(index);
-//   //   console.log(array);
-// });
-
-// const numbers2 = [];
-
-// for (let num of numbers) {
-//   const doubledNum = num * 2;
-//   numbers2.push(doubledNum);
-// }
-
-// numbers.forEach(number => {
-//   const doubledNum = number * 2;
-//   numbers2.push(doubledNum);
-// });
-
-// console.log(numbers2);
-
-// II - map
-// const numbers = [1, 2, 3];
-
-// const numbers2 = numbers.map((number, index, array) => {
-//   return number * 2;
-// });
-
-// console.log(numbers2);
-
-// const array = ['a', 'b', 'c'];
-
-// const array2 = array.map(item => item.toUpperCase());
-
-// // const array3 = array.map(item => {
-// //   item.toUpperCase();
-// // }); // масивз трьох undefined
-
-// console.log(array2);
-
-// III - find
-// const numbers = [1, 2, 3, 4, 5];
-
-// // const result = numbers.find((number, index, array) => {
-// //   return number > 3;
-// // });
-
-// // const result = numbers.find((number, index, array) => number > 3);
-
-// // console.log(result);
-
-// const result1 = numbers.find((number, index, array) => number > 10);
-
+// const result1 = students.every(({age}) => age > 20); // false
 // console.log(result1);
 
-// IV - filter
-// const numbers = [1, 2, 3, 4, 5];
+// // some
+// const result2 = students.some(({ age }) => age > 20); // true
+// console.log(result2);
 
-// // const filteredArray = numbers.filter((number, index, array) => {
-// //   return number > 3;
-// // });
+// flatMap
 
-// // const filteredArray = numbers.filter((number, index, array) => number > 3);
+// const courses = students.map(({ courses }) => courses);
+// console.log(courses);
 
-// // console.log(filteredArray);
+// const courses = students.flatMap(({ courses }) => courses);
+// console.log(courses);
 
-// const filteredArray1 = numbers.filter((number, index, array) => number > 10);
+// // flat (не перебираючий/функціональний)
 
-// console.log(filteredArray1);
+// const arr = [1, 2, [2, 3, [4, 5, [6, 7, [8, 9]]]]];
+// console.log(arr.flat(Infinity));
+
+// findIndex
+
+// const arr1 = [1, 2, 3, 4, 5];
+
+// const index = arr1.findIndex(num => num > 3);
+// console.log(index);
+
+// sort (мутує)
+// toSorted
+
+// const nums = [26, 40, 59, 36, 10];
+
+// console.log(nums.toSorted());
+
+// const nums1 = [26, 3, 40, 59, 5, 36, 4, 10, 1];
+
+// console.log(nums1.toSorted()); // [1, 10, 26, 3, 36, 4, 40, 5, 59]
+
+// console.log(nums1.toSorted((a, b) => a - b)); // 1 -> 100
+// console.log(nums1.toSorted((a, b) => b - a)); // 100 -> 1
+
+// const letters = [
+//   'apple',
+//   'cake',
+//   'potato',
+//   'tomato',
+//   'cucumber',
+//   'banana',
+//   'cabbage',
+// ];
+
+// console.log(letters.toSorted());
+
+// const letters1 = [
+//   'apple',
+//   'cake',
+//   'Potato',
+//   'tomato',
+//   'Cucumber',
+//   'banana',
+//   'Cabbage',
+// ];
+
+// console.log(letters1.toSorted()); // ['Cabbage', 'Cucumber', 'Potato', 'apple', 'banana', 'cake', 'tomato']
+
+// console.log(letters1.toSorted((a, b) => a.localeCompare(b))); // a -> z
+// console.log(letters1.toSorted((a, b) => b.localeCompare(a))); // z -> a
+
+// console.log(students.toSorted((a, b) => a.age - b.age));
+// console.log(students.toSorted((a, b) => a.name.localeCompare(b.name)));
+
+// reduce
+
+// const numbers = [2, 6, 3, 8, 30, 34, 25];
+
+// const sum = numbers.reduce((acc, item, idx) => {
+//   console.log(`Iteration # ${idx + 1}`);
+//   console.log('acc', acc);
+//   console.log('item', item);
+//   const res = acc + item;
+//   console.log('res', res);
+//   return res;
+// }, 0);
+
+// console.log(sum);
+
+// const filteredStudents = students.filter((item) => item.isActive);
+// const names = filteredStudents.map((item) => item.name);
+// const sortedNames = names.toSorted((a, b) => a.localeCompare(b));
+
+const sortedNames = students
+  .filter(item => item.isActive)
+  .map(item => item.name)
+  .toSorted((a, b) => a.localeCompare(b));
+
+console.log(sortedNames);
